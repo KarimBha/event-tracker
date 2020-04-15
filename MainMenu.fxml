@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="903.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxsample.MainMenuController">
+   <children>
+      <TableView fx:id="EventTable" layoutX="14.0" layoutY="76.0" prefHeight="495.0" prefWidth="762.0" style="-fx-background-color: khaki;">
+        <columns>
+            <TableColumn fx:id="tbEventID" prefWidth="75.0" text="Event ID" />
+          <TableColumn id="tbEvent" fx:id="tbEvent" prefWidth="136.5" text="Event" />
+          <TableColumn id="tbDate" fx:id="tbDate" prefWidth="251.5" text="Date" />
+            <TableColumn id="tbDetail" fx:id="tbDetail" prefWidth="295.5" text="Details" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnlogout" layoutX="807.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="67.0" prefWidth="37.0" style="-fx-background-color: black;">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="57.0">
+               <image>
+                  <Image url="@images/home%20button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnconfirm" layoutX="38.0" layoutY="581.0" mnemonicParsing="false" onAction="#confirm" style="-fx-background-color: Khaki;" text="Confirm Event">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblconfirmed" layoutX="214.0" layoutY="587.0" text="Event Confirmed!" textFill="#ffff5f">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label id="Welcome" fx:id="lblWelcome" layoutX="58.0" layoutY="6.0" textFill="#ffff5f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

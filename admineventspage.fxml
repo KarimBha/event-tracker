@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="942.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxsample.AdmineventspageController">
+   <children>
+      <Label fx:id="lblviewevent" layoutX="134.0" layoutY="31.0" style="-fx-background-color: orange;" text="View Event Attendance" textFill="#0015ff">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ATable" layoutX="14.0" layoutY="106.0" prefHeight="433.0" prefWidth="419.0" style="-fx-background-color: khaki;">
+        <columns>
+            <TableColumn fx:id="tbEventID" prefWidth="75.0" text="Event ID" />
+          <TableColumn fx:id="tbEvent" prefWidth="247.5" text="Event" />
+          <TableColumn fx:id="tbConfirmed" minWidth="0.0" prefWidth="94.0" text="Confirmed" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnmainpage" layoutX="36.0" layoutY="30.0" mnemonicParsing="false" onAction="#mainpage" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: black;">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="47.0">
+               <image>
+                  <Image url="@images/back%20arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnlogout" layoutX="821.0" layoutY="17.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: black;">
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="58.0">
+               <image>
+                  <Image url="@images/home%20button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="552.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: orange;" text="Delete Event" textFill="#0015ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblselectevent" layoutX="154.0" layoutY="552.0" prefHeight="30.0" prefWidth="211.0" style="-fx-background-color: orange;" text="Select an event from the table!" textFill="#00155f">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="barchart" layoutX="441.0" layoutY="134.0" prefHeight="374.0" prefWidth="477.0" style="-fx-background-color: khaki;" title="Average Department Confirmation">
+        <xAxis>
+          <CategoryAxis label="Department" side="BOTTOM" fx:id="xaxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yaxis" label="Percentage" prefHeight="288.0" prefWidth="46.0" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

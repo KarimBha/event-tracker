@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxsample.AdminpageController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="920.0" style="-fx-background-color: maroon;">
+         <children>
+            <Label layoutX="28.0" layoutY="21.0" text="Administrator Page" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button id="btnadduser" fx:id="btnadduser" layoutX="14.0" layoutY="441.0" mnemonicParsing="false" onAction="#adduser" style="-fx-background-color: orange;" text="Add User" textFill="#0015ff">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnaddevent" layoutX="325.0" layoutY="441.0" mnemonicParsing="false" onAction="#addevent" style="-fx-background-color: orange;" text="Add Event" textFill="#0015ff">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField id="Username" fx:id="txtUserName" layoutX="14.0" layoutY="175.0" prefHeight="50.0" prefWidth="252.0" promptText="Username">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField id="Password" fx:id="txtPassword" layoutX="14.0" layoutY="237.0" prefHeight="50.0" prefWidth="252.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <ChoiceBox id="deptchoicebox" fx:id="deptchoicebox" layoutX="14.0" layoutY="293.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: orange;" />
+            <Label id="usertaken" fx:id="lblusertaken" layoutX="14.0" layoutY="137.0" prefHeight="38.0" prefWidth="252.0" text="Username Taken" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label id="lbluseradded" fx:id="lbluseradded" layoutX="14.0" layoutY="373.0" prefHeight="38.0" prefWidth="187.0" text="User Added Successfully" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField id="EventName" fx:id="txteventname" layoutX="325.0" layoutY="175.0" prefHeight="50.0" prefWidth="252.0" promptText="Event Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField id="EventDetails" fx:id="txteventdetails" layoutX="325.0" layoutY="237.0" prefHeight="50.0" prefWidth="252.0" promptText="Event Details">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ChoiceBox id="deptchoicebx" fx:id="deptchoicebx" layoutX="325.0" layoutY="299.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: orange;" />
+            <DatePicker id="datepicker" fx:id="datepicker" layoutX="325.0" layoutY="344.0" promptText="Event Date" style="-fx-background-color: orange;" />
+            <Label id="lbluseradded" fx:id="lbleventadded" layoutX="325.0" layoutY="403.0" prefHeight="38.0" prefWidth="210.0" text="Event Added Successfully" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label id="lbluseradded" fx:id="lbleventerror" layoutX="325.0" layoutY="373.0" prefHeight="38.0" prefWidth="210.0" text="Missing fields..." textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label id="lblusererror" fx:id="lblusererror" layoutX="14.0" layoutY="344.0" prefHeight="38.0" prefWidth="210.0" text="Missing fields..." textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button id="btnviewevents" fx:id="btnviewevents" layoutX="693.0" layoutY="249.0" mnemonicParsing="false" onAction="#vieweventspage" style="-fx-background-color: orange;" text="Attendance Report" textFill="#0015ff">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnlogout" layoutX="799.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="44.0" style="-fx-background-color: black;">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="56.0">
+                     <image>
+                        <Image url="@images/home%20button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label id="lbladduser" fx:id="lbladduser" layoutX="14.0" layoutY="103.0" text="Add New User" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label id="lbladdevent" fx:id="lbladdevent" layoutX="334.0" layoutY="103.0" text="Add New Event" textFill="#ffcc08">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button id="btnviewevents" fx:id="viewadminevents" layoutX="693.0" layoutY="187.0" mnemonicParsing="false" onAction="#viewadminevents" style="-fx-background-color: orange;" text="View Events" textFill="#0015ff">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
